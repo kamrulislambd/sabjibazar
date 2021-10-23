@@ -1,0 +1,403 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+/*Common CSS*/
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    scroll-behavior: smooth;
+    object-fit: cover;
+    transition: all .2s linear;
+}
+::selection{
+    color: #f39c12;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 7rem;
+}
+/*Custom CSS Starts*/ 
+
+$green:#BAC34E;
+$black: #222;
+$white: #fff;
+$light-color: #666;
+$light-bg:#f3f3f3;
+$box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.1);
+$border: .1rem solid rgba(0, 0, 0, 0.1);
+
+@mixin grid($val){
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax($val, 1fr));
+    gap: 1.5rem;
+}
+section{
+    padding: 2rem 9%;
+}
+.btn{
+    display: inline-block;
+    padding: .8rem 3rem;
+    background: $green;
+    color: $white;
+    font-size: 1.7rem;
+    text-align: center;
+    &:hover{
+        background: $black;
+        color: $white;
+    }
+}
+.header{
+    background: $white;
+    padding: 2rem 9%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: $box-shadow;
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 1000;
+
+    .logo{
+        font-size: 3rem;
+        color: $black;
+        font-weight: 600;
+        &  i{
+            color: $green;
+            padding-right: .5rem;
+        }
+    }
+    .navbar{
+        & a{
+            font-size: 1.7rem;
+            color: $light-color;
+            margin: 0 1rem;
+            &:hover{
+                color: $green;
+            }
+        }
+    }
+    .icons{
+        div{
+            font-size: 2.5rem;
+            color: $light-color;
+            margin-left: 1rem;
+            cursor: pointer;
+            &:hover{
+                color: $green;
+            }
+        }
+    }
+
+    .btn{
+        display: inline-block;
+        padding: .8rem 3rem;
+        background: $green;
+        color: $white;
+        font-size: 1.7rem;
+        text-align: center;
+    }
+    .search-form{
+        position: absolute;
+        top: -115%;
+        right: 2rem;
+        width: 50rem;
+        height: 5.5rem;
+        border-radius: .5rem;
+        border: $border;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        box-shadow: $box-shadow;
+        background: $white;
+        &.active{
+            top: 115%;
+        }
+        & input{
+            height: 100%;
+            width: 100%;
+            font-size: 1.5rem;
+            padding: 0 1.2rem;
+            color: $black;
+            text-transform: none;
+        }
+        & label{
+            font-size: 2.5rem;
+            margin-right: 1.2rem;
+            cursor: pointer;
+            color: $light-color;
+            &:hover{
+                color: $green;
+            }
+        }
+    }
+    .shopping-cart{
+        position: absolute;
+        top: 115%;
+        right: -115%;
+        width: 35rem;
+        background: $white;
+        box-shadow: $box-shadow;
+        border: $border;
+        border-radius: .5rem;
+        margin-bottom: 2rem;
+        &.active{
+            right: 2rem;
+        }
+       .box{
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            position: relative;
+            padding: 2rem;
+            & .fa-times{
+                position: absolute;
+                top: 50%;
+                right: 2rem;
+                transform: translateY(-50%);
+                font-size: 2rem;
+                color: $light-color;
+                cursor: pointer;
+                &:hover{
+                    color: $green;
+                }
+            }
+        }
+        & img{
+            height: 10rem;
+        }
+        & .content{
+            h3{
+                font-size: 1.7rem;
+                padding-bottom: .5rem;
+            }
+            span{
+                font-size: 1.5rem;
+                color: $light-color;
+            }
+            & .multiply{
+                margin: 0 .5rem;
+            }
+        }
+    }
+    & p{
+        text-align: center;
+        color: $black;
+        font-size: 2.5rem;
+        font-weight: bolder;
+    }
+    .btn{
+        margin-top: 1rem;
+        width: 100%;
+        font-weight: bolder;
+        &:hover{
+            background: $black;
+        }
+    }
+    .login-form{
+        position: absolute;
+        top: 115%;
+        right: -115%;
+        width: 35rem;
+        box-shadow: $box-shadow;
+        border: $border;
+        border-radius: .5rem;
+        &.active{
+            right: 2rem;
+        }
+        .box{
+            padding: 2rem;
+            background: $white;
+            border-radius: .5rem;
+            & h2{
+                font-size: 2rem;
+                color: $black;
+                text-align: center;
+                margin-bottom: 2rem;
+            }
+            & .user-form{
+                input{
+                    width: 100%;
+                    margin-bottom: 1rem;
+                    border: $border;
+                    padding: 1rem 1rem;
+                }
+                & .check{
+                    display: flex;
+                    align-items: center;
+                    margin-bottom: 3rem;
+                    input{
+                        width: 2rem;
+                        height: 2rem;
+                        margin-right: 1rem;
+                    }
+                    p{
+                        font-size: 1.5rem;
+                        color: $light-color;
+                    }
+                }
+            }
+        }
+    }
+}
+
+#menu-btn{
+    display: none;
+}
+
+/* footer section css */
+
+.footer{
+    background: $light-bg;
+    .box-container{
+        padding: 2rem 9%;
+        @include grid(25rem);
+
+        .box{
+            h3{
+                font-size: 2.5rem;
+                color: $black;
+                padding: 1rem 0;
+            }
+            p{
+                font-size: 1.5rem;
+                color: $light-color;
+                line-height: 1.7;
+            }
+            a{
+                display: block;
+                color: $light-color;
+                margin: 1rem 0;
+                font-size: 1.5rem;
+                &:hover{
+                        color: $green;
+                        i{
+                            padding-right:2rem;
+                        }
+                }
+                i{
+                    color: $green;
+                    padding-right: 1rem;
+                }
+            }
+            input[type="email"]{
+                padding: 1.2rem 1rem;
+                width: 100%;
+                color: $black;
+                margin: 1rem 0;
+                font-size: 1.5rem;
+                border: $border;
+                border-radius: .5rem;
+            }
+            .btn{
+                display: block;
+                padding: .8rem 3rem;
+                background: $green;
+                color: $white;
+                font-size: 1.7rem;
+                text-align: center;
+                &:hover{
+                    background: $black;
+                    color: $white;
+                }
+            }
+            .payment{
+                width: 100%;
+                margin-top: 2rem;
+                img{
+                    width: 100%;
+                }
+            }
+        }
+    }
+    .credit{
+        background: $green;
+        text-align: center;
+        font-size: 1.7rem;
+        padding: 3.5rem 0;
+        color: $white;
+    }
+}
+
+/*Home Section CSS*/ 
+.home{
+    padding-top: 15rem;
+    background: url(../images/home-bg.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+
+    .slides-container{
+
+        .slide{
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            display: none;
+            &.active{
+                display: flex;
+            }
+
+            .content{
+                flex: 1 1 40rem;
+                span{
+                    font-size: 2.5rem;
+                    color: $light-color;
+                }
+                h2{
+                    color: $black;
+                    font-size: 6rem;
+                    padding: 1rem 0;
+                }
+            }
+            .image{
+                flex: 1 1 40rem;
+            }
+            img{
+                width: 100%;
+            }
+        }
+    }
+    #next-slide,
+    #prev-slide{
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        height: 5rem;
+        width: 5rem;
+        line-height: 5rem;
+        box-shadow: $box-shadow;
+        text-align: center;
+        font-size: 2.5rem;
+        background: $white;
+        cursor: pointer;
+        &:hover{
+            background: $green;
+            color: $white;
+        }
+    }
+    #prev-slide{
+        left: 2rem;
+    }
+    #next-slide{
+        right: 2rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+/*Media Query Files*/ 
+@import 'responsive';

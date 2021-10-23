@@ -1,0 +1,478 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap");
+/*Common CSS*/
+* {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  text-transform: capitalize;
+  scroll-behavior: smooth;
+  object-fit: cover;
+  transition: all .2s linear;
+}
+
+::selection {
+  color: #f39c12;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-padding-top: 7rem;
+}
+
+/*Custom CSS Starts*/
+section {
+  padding: 2rem 9%;
+}
+
+.btn {
+  display: inline-block;
+  padding: .8rem 3rem;
+  background: #BAC34E;
+  color: #fff;
+  font-size: 1.7rem;
+  text-align: center;
+}
+
+.btn:hover {
+  background: #222;
+  color: #fff;
+}
+
+.header {
+  background: #fff;
+  padding: 2rem 9%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+.header .logo {
+  font-size: 3rem;
+  color: #222;
+  font-weight: 600;
+}
+
+.header .logo i {
+  color: #BAC34E;
+  padding-right: .5rem;
+}
+
+.header .navbar a {
+  font-size: 1.7rem;
+  color: #666;
+  margin: 0 1rem;
+}
+
+.header .navbar a:hover {
+  color: #BAC34E;
+}
+
+.header .icons div {
+  font-size: 2.5rem;
+  color: #666;
+  margin-left: 1rem;
+  cursor: pointer;
+}
+
+.header .icons div:hover {
+  color: #BAC34E;
+}
+
+.header .btn {
+  display: inline-block;
+  padding: .8rem 3rem;
+  background: #BAC34E;
+  color: #fff;
+  font-size: 1.7rem;
+  text-align: center;
+}
+
+.header .search-form {
+  position: absolute;
+  top: -115%;
+  right: 2rem;
+  width: 50rem;
+  height: 5.5rem;
+  border-radius: .5rem;
+  border: 0.1rem solid rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  background: #fff;
+}
+
+.header .search-form.active {
+  top: 115%;
+}
+
+.header .search-form input {
+  height: 100%;
+  width: 100%;
+  font-size: 1.5rem;
+  padding: 0 1.2rem;
+  color: #222;
+  text-transform: none;
+}
+
+.header .search-form label {
+  font-size: 2.5rem;
+  margin-right: 1.2rem;
+  cursor: pointer;
+  color: #666;
+}
+
+.header .search-form label:hover {
+  color: #BAC34E;
+}
+
+.header .shopping-cart {
+  position: absolute;
+  top: 115%;
+  right: -115%;
+  width: 35rem;
+  background: #fff;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  border: 0.1rem solid rgba(0, 0, 0, 0.1);
+  border-radius: .5rem;
+  margin-bottom: 2rem;
+}
+
+.header .shopping-cart.active {
+  right: 2rem;
+}
+
+.header .shopping-cart .box {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  position: relative;
+  padding: 2rem;
+}
+
+.header .shopping-cart .box .fa-times {
+  position: absolute;
+  top: 50%;
+  right: 2rem;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  color: #666;
+  cursor: pointer;
+}
+
+.header .shopping-cart .box .fa-times:hover {
+  color: #BAC34E;
+}
+
+.header .shopping-cart img {
+  height: 10rem;
+}
+
+.header .shopping-cart .content h3 {
+  font-size: 1.7rem;
+  padding-bottom: .5rem;
+}
+
+.header .shopping-cart .content span {
+  font-size: 1.5rem;
+  color: #666;
+}
+
+.header .shopping-cart .content .multiply {
+  margin: 0 .5rem;
+}
+
+.header p {
+  text-align: center;
+  color: #222;
+  font-size: 2.5rem;
+  font-weight: bolder;
+}
+
+.header .btn {
+  margin-top: 1rem;
+  width: 100%;
+  font-weight: bolder;
+}
+
+.header .btn:hover {
+  background: #222;
+}
+
+.header .login-form {
+  position: absolute;
+  top: 115%;
+  right: -115%;
+  width: 35rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  border: 0.1rem solid rgba(0, 0, 0, 0.1);
+  border-radius: .5rem;
+}
+
+.header .login-form.active {
+  right: 2rem;
+}
+
+.header .login-form .box {
+  padding: 2rem;
+  background: #fff;
+  border-radius: .5rem;
+}
+
+.header .login-form .box h2 {
+  font-size: 2rem;
+  color: #222;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.header .login-form .box .user-form input {
+  width: 100%;
+  margin-bottom: 1rem;
+  border: 0.1rem solid rgba(0, 0, 0, 0.1);
+  padding: 1rem 1rem;
+}
+
+.header .login-form .box .user-form .check {
+  display: flex;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+
+.header .login-form .box .user-form .check input {
+  width: 2rem;
+  height: 2rem;
+  margin-right: 1rem;
+}
+
+.header .login-form .box .user-form .check p {
+  font-size: 1.5rem;
+  color: #666;
+}
+
+#menu-btn {
+  display: none;
+}
+
+/* footer section css */
+.footer {
+  background: #f3f3f3;
+}
+
+.footer .box-container {
+  padding: 2rem 9%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  gap: 1.5rem;
+}
+
+.footer .box-container .box h3 {
+  font-size: 2.5rem;
+  color: #222;
+  padding: 1rem 0;
+}
+
+.footer .box-container .box p {
+  font-size: 1.5rem;
+  color: #666;
+  line-height: 1.7;
+}
+
+.footer .box-container .box a {
+  display: block;
+  color: #666;
+  margin: 1rem 0;
+  font-size: 1.5rem;
+}
+
+.footer .box-container .box a:hover {
+  color: #BAC34E;
+}
+
+.footer .box-container .box a:hover i {
+  padding-right: 2rem;
+}
+
+.footer .box-container .box a i {
+  color: #BAC34E;
+  padding-right: 1rem;
+}
+
+.footer .box-container .box input[type="email"] {
+  padding: 1.2rem 1rem;
+  width: 100%;
+  color: #222;
+  margin: 1rem 0;
+  font-size: 1.5rem;
+  border: 0.1rem solid rgba(0, 0, 0, 0.1);
+  border-radius: .5rem;
+}
+
+.footer .box-container .box .btn {
+  display: block;
+  padding: .8rem 3rem;
+  background: #BAC34E;
+  color: #fff;
+  font-size: 1.7rem;
+  text-align: center;
+}
+
+.footer .box-container .box .btn:hover {
+  background: #222;
+  color: #fff;
+}
+
+.footer .box-container .box .payment {
+  width: 100%;
+  margin-top: 2rem;
+}
+
+.footer .box-container .box .payment img {
+  width: 100%;
+}
+
+.footer .credit {
+  background: #BAC34E;
+  text-align: center;
+  font-size: 1.7rem;
+  padding: 3.5rem 0;
+  color: #fff;
+}
+
+/*Home Section CSS*/
+.home {
+  padding-top: 15rem;
+  background: url(../images/home-bg.jpg) no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+
+.home .slides-container .slide {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  display: none;
+}
+
+.home .slides-container .slide.active {
+  display: flex;
+}
+
+.home .slides-container .slide .content {
+  flex: 1 1 40rem;
+}
+
+.home .slides-container .slide .content span {
+  font-size: 2.5rem;
+  color: #666;
+}
+
+.home .slides-container .slide .content h2 {
+  color: #222;
+  font-size: 6rem;
+  padding: 1rem 0;
+}
+
+.home .slides-container .slide .image {
+  flex: 1 1 40rem;
+}
+
+.home .slides-container .slide img {
+  width: 100%;
+}
+
+.home #next-slide,
+.home #prev-slide {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 5rem;
+  width: 5rem;
+  line-height: 5rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  text-align: center;
+  font-size: 2.5rem;
+  background: #fff;
+  cursor: pointer;
+}
+
+.home #next-slide:hover,
+.home #prev-slide:hover {
+  background: #BAC34E;
+  color: #fff;
+}
+
+.home #prev-slide {
+  left: 2rem;
+}
+
+.home #next-slide {
+  right: 2rem;
+}
+
+/*Media Query Files*/
+/*Large Device*/
+@media (max-width: 991px) {
+  html {
+    font-size: 55%;
+  }
+  .header {
+    padding: 2rem;
+  }
+  section {
+    padding: 3rem 2rem;
+  }
+}
+
+/*Medium Device*/
+@media (max-width: 768px) {
+  #menu-btn {
+    display: inline-block;
+  }
+  .header .navbar {
+    position: absolute;
+    top: 99%;
+    left: 0;
+    right: 0;
+    background: #fff;
+    border: 0.1rem solid rgba(0, 0, 0, 0.1);
+    clip-path: polygon(0% 0%, 100% 0%, 0% 0%);
+  }
+  .header .navbar a {
+    display: block;
+    margin: 1.5rem;
+    padding: 1.5rem;
+    font-size: 2rem;
+    border-bottom: 0.1rem solid rgba(0, 0, 0, 0.1);
+  }
+  .header .navbar.active {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+  }
+  .header .search-form {
+    width: 90%;
+  }
+}
+
+/*Small Device*/
+@media (max-width: 450px) {
+  html {
+    font-size: 50%;
+  }
+  .home .slides-container .slide .content h2 {
+    font-size: 5rem;
+  }
+}
+/*# sourceMappingURL=style.css.map */
